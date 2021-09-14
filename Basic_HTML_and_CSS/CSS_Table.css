@@ -1,5 +1,8 @@
 table {
+		max-width:1000px;
 		border:3px black;
+		border-style: solid;
+		
 }
 tr, th {
 	background-color:Tomato;

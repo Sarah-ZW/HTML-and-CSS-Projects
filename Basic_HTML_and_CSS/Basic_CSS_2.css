@@ -1,6 +1,9 @@
-p {color:rgb(224,129,79);
+p {color:rgb(3,4,4);
 	font-style: italic;
 	font-weight: bold;
 	text-align: center;
 	background-color:rgb(111,149,79);
 	}
+h1 {
+	text-shadow: 5px 5px #ffc0c7;
+}

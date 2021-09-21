@@ -1,0 +1,32 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+p {
+    font-size: 10px;
+    text-align: center;
+    color: black
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color:orange;
+}
+h1 {
+    text-align: center;
+    font-size: 40px
+}
+input {
+    margin: 20px;
+    border: 1px dotted black;
+    border-radius: 10px;
+    width:200px;
+}
+.alignR {
+    float:left;
+    width:50%;
+}
+.alightL {
+    float:right;
+    width:50%;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Challenge </title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Sarah">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            li {
+                display:inline;
+            }
+			img{
+				display: block;
+				width:100%;
+				filter:saturate(1);
+				border: 6px solid black;
+				border-radius: 30px;
+				
+			}
+			footer {
+				text-align: center;
+				font-weight: 900;
+			}
+			table, th, td {
+				border: 1px solid black;
+			}
+			th  {
+				background-color: darkcyan;
+			}
+			.container {
+				position:relative;
+				display:block;
+				margin-left:auto;
+				margin-right:auto;
+				width:50%;
+				text-align:center;
+				font-size: 40px;
+				color:white;
+				font-weight: 800;
+			
+			}
+			.center {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%, -50%);
+			}
+			ul {
+				position:fixed;
+				top:0;
+				width:100%;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				background-color: darkorange;
+				overflow:hidden;
+				
+			}
+			li{
+				float:left;
+			}
+			li a{
+				display:block;
+				color:olive;
+				font-weight: 700;
+				text-align:center;
+				padding:14px 16px;
+				text-decoration:none;
+				}
+			
+			@media screen and (max-width:600px){
+				li {
+					float:none;
+				}
+				p {
+					color:blue;
+				}
+			}
+			li a:hover {
+				background:#111;
+			}
+			.column {
+				float: left;
+				width:50%;
+				padding: 10px;
+				color:white;
+				height: 400px;
+				width: 50%;
+			}
+			.row:after {
+				content:"";
+				display:table;
+				clear:both;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			p:hover {
+				color:deeppink;
+				font-size:large;
+				background-color: yellowgreen;
+			}
+			.overlay {
+				position:absolute;
+				top:0;
+				left:0;
+				bottom:0;
+				right:0;
+				height:100%;
+				width:100%;
+				opacity:0;
+				transition: .5s ease;
+				background-color:darkseagreen;
+				border: 6px solid black;
+				border-radius: 30px;
+			}
+			.container:hover .overlay {
+				opacity:1;
+			}
+			video {
+				width:100%;
+			}
+			.video-container{
+				position:relative;
+				display:block;
+				margin-left: auto;
+				margin-right: auto;
+				width:500px;
+				height:300px;
+
+			}
+			.video-overlay {
+				color:rgb(255, 254, 254);
+				position:absolute;
+				top:0;
+				left:0;
+				bottom:0;
+				right:0;
+				font-size:30px;
+				font-weight: 750;
+				height:100%;
+				width:100%;
+			}
+        </style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h4> Basic HTML Template </h4>
+		</header>
+		<p> Introduction to basic HTML syntax </p>
+		<p>Added another paragraph &#128514;</p>
+      
+		
+		<div class="container">
+			<img src="1.jpg" alt="hurdler">
+			<div class = "overlay">
+				<div class="center">Watch me run and jump!
+				</div>
+			</div>
+		</div>
+	
+
+	<div>
+		<table>
+			<tr>
+				<th>person</th>
+				<th>sport</th>
+				<th>favorite food</th>
+			</tr>
+			<tr>
+				<td>Pedro</td>
+				<td>Mariana</td>
+				<td>Celia</td>
+			</tr>
+		</table>
+	</div>
+
+	<div>
+		<div class = "row">
+			<div class= "column" style = "background-color:darkorchid";>
+				<h2> I am Column 1</h2>
+			</div>
+			<div class = "column" style = "background-color: darkorange";>
+				<h2> I am Column 2</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="video-container">
+		<video  controls muted controls autoplay controls loop>
+			<source src="video.mp4" alt="person running">
+		</video>
+		<div class="video-overlay">
+			<div class ="center" zindex>Text over video.</div>
+		</div>
+	</div>
+
+
+
+	</body>
+	<footer>
+		<p>I AM A FOOTER</p>
+	</footer>
+</html>

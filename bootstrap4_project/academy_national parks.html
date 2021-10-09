@@ -164,8 +164,18 @@
 </div>      
      <!--NATIONAL PARK OPTIONS-->
 
-   
-  
+   <!--DEALS-->
+   <!--jumbotron heading-->
+   <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+     <div class="container">
+       <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 900; text-transform:uppercase;">Trip Deals</h1>
+     <p class="lead"> Check out our monthly deals...</p>
+     <!--Trip deals-->
+     <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#register">Check out our monthly deals</button>
+    <!--Trip deals-->  
+    </div>
+   </div>
+  <!--End jumbotron heading-->
 
 
 
@@ -181,10 +191,54 @@
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         
-        <button type="submit" class="btn btn-secondary">Submit</button>
+        <button type="button" class="btn btn-secondary popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great trip deals!">
+          Submit
+        </button>
     </form>
 </div>
 <!--EMAIL-->
+
+<!--FORM MODAL-->
+        <div class="modal" id="register" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Register to receive trip deals</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                <form>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Password</label>
+                    <input type="text" class="form-control" id="password" placeholder="Password">
+                  </div>
+                </form>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--END FORM MODAL-->
 
 <!-- FOOTER-->
 <div class = "container my-5">
@@ -204,7 +258,18 @@
     </ul>
 </div>    
 
-
+<!--DROP DOWN BUTTON WITH LINKS TO PARK WEBSITES-->
+<div class="dropdown" style="margin: auto; padding:10px;">
+  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:block; margin-left:auto; margin-right:auto;">
+    Park Official Websites
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="https://www.nps.gov/acad/index.htm" target="_blank">Acadia</a>
+    <a class="dropdown-item" href="https://www.nps.gov/zion/index.htm" target="_blank">Zion</a>
+    <a class="dropdown-item" href="https://www.nps.gov/glac/index.htm" target="_blank">Glacier Mountain</a>
+  </div>
+</div>
+<!--END FOOTER-->
 
     </div>
 
@@ -213,5 +278,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+    $('.popover-dismiss').popover({  //popover jquery
+      trigger: 'focus'
+    })
+    $('.dropdown-toggle').dropdown() //dropdown menu bootstrap component jquery
+    </script>
   </body>
 </html>
